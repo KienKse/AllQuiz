@@ -1,7 +1,10 @@
 package com.app.kien.allquiz;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -12,6 +15,8 @@ import java.util.Collections;
 import java.util.Random;
 
 public class quizzActivity extends AppCompatActivity {
+
+    private static final int CONT_QUIZ = 5;
 
     private TextView contador;
     private TextView questao;
@@ -32,6 +37,8 @@ public class quizzActivity extends AppCompatActivity {
             {"Espanha","Madri","Cidade do Mexico","Jakarta","Havana"},
             {"Italia","Roma","Londres","Paris","Atenas"},
             {"Brasil","Brasilia","Bahia","Goias","Recife"},
+            {"Qual a cor do cavalo branco de Napoleão?","Branco","Marron","Preto","Cinza"},
+            {"Quanto é 7*7?","49","54","32","38"}
 //            {"","","","",""}
     };
 
@@ -66,7 +73,13 @@ public class quizzActivity extends AppCompatActivity {
     }
 
     public void proximoQuiz() {
-        contador.setText(contQuiz + "º");
+        String showQuiz;
+        if(contQuiz == 0) {
+            showQuiz = contQuiz + 1 + "";
+        } else {
+            showQuiz = contQuiz + "º";
+        }
+        contador.setText(showQuiz);
 
         Random random = new Random();
         // Gerando um num do array pegando a pergunt
@@ -77,7 +90,9 @@ public class quizzActivity extends AppCompatActivity {
 
         //Resposta certa *Set*
         questao.setText(quizScreen.get(0));
-        respostCerta = quizScreen.get(0);
+
+        // indice errado na fonte - CORRETO = 1 - FONTE = 0
+        respostCerta = quizScreen.get(1);
 
         // Removendo o indice principal e embaralhando
         quizScreen.remove(0);
@@ -91,6 +106,40 @@ public class quizzActivity extends AppCompatActivity {
 
         // Removendo quiz atual da lista *Duplicate Problem*
         quiz.remove(numRandom);
+    }
 
+    public void checarRespostas(View v) {
+        Button btResposta = (Button) findViewById(v.getId());
+        String btText = btResposta.getText().toString();
+
+        String alerta;
+        if (btResposta.getText().equals(respostCerta)) {
+            // Correto
+            alerta = "Correto!";
+            contadorRespCerta++;
+        } else {
+            // Errado
+            alerta = "Errado...";
+        }
+
+        // Criando um dialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(alerta);
+        builder.setMessage("Resposta: " + respostCerta);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if(contQuiz == CONT_QUIZ) {
+                    // Mostrar
+                    //SEM FONTE INICIAL
+                } else {
+                    contQuiz++;
+                    // VAI DAR ERRO POIS NÃO HÁ PROX
+                    proximoQuiz();
+                }
+            }
+        });
+        builder.setCancelable(false);
+        builder.show();
     }
 }

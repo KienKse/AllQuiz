@@ -33,12 +33,14 @@
         android:id="@+id/bt1"
         android:padding="@dimen/respBt_padd"
         android:layout_marginTop="@dimen/respBt_first_margin"
+        android:onClick="checarRespostas"
         android:layout_width="@dimen/respBt_width"
         android:layout_height="@dimen/respBt_heigth" />
 
     <Button
         android:id="@+id/bt2"
         android:padding="@dimen/respBt_padd"
+        android:onClick="checarRespostas"
         android:layout_marginTop="@dimen/respBt_margin"
         android:layout_width="@dimen/respBt_width"
         android:layout_height="@dimen/respBt_heigth" />
@@ -46,6 +48,7 @@
     <Button
         android:id="@+id/bt3"
         android:padding="@dimen/respBt_padd"
+        android:onClick="checarRespostas"
         android:layout_marginTop="@dimen/respBt_margin"
         android:layout_width="@dimen/respBt_width"
         android:layout_height="@dimen/respBt_heigth" />
@@ -54,6 +57,7 @@
     <Button
         android:id="@+id/bt4"
         android:padding="@dimen/respBt_padd"
+        android:onClick="checarRespostas"
         android:layout_marginTop="@dimen/respBt_margin"
         android:layout_width="@dimen/respBt_width"
         android:layout_height="@dimen/respBt_heigth" />

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="respBt_padd">5dp</dimen>
+    <dimen name="respBt_first_margin">70dp</dimen>
+    <dimen name="respBt_margin">15dp</dimen>
+
+    <dimen name="respBt_width">300dp</dimen>
+    <dimen name="respBt_heigth">60dp</dimen>
+</resources>

@@ -6,4 +6,7 @@
 
     <dimen name="respBt_width">300dp</dimen>
     <dimen name="respBt_heigth">60dp</dimen>
+
+    <dimen name="botaoStart_width">180dp</dimen>
+    <dimen name="botaoStart_height">50dp</dimen>
 </resources>

@@ -1,9 +1,11 @@
 package com.app.kien.allquiz;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,7 +18,8 @@ import java.util.Random;
 
 public class quizzActivity extends AppCompatActivity {
 
-    private static final int CONT_QUIZ = 5;
+    //Numero Total de Questoes -1
+    private static final int CONT_QUIZ = 4;
 
     private TextView contador;
     private TextView questao;
@@ -53,6 +56,12 @@ public class quizzActivity extends AppCompatActivity {
         respBt2 = (Button) findViewById(R.id.bt2);
         respBt3 = (Button) findViewById(R.id.bt3);
         respBt4 = (Button) findViewById(R.id.bt4);
+
+
+        //Receber Tipo de questionario
+        int quizCategory= getIntent().getIntExtra("QUIZ_CATEGORY",0);
+
+        Log.v("Tipo_Categoria",quizCategory + "");
 
         for (int i = 0; i < quizDados.length; i++) {
 
@@ -132,6 +141,9 @@ public class quizzActivity extends AppCompatActivity {
                 if(contQuiz == CONT_QUIZ) {
                     // Mostrar
                     //SEM FONTE INICIAL
+                    Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                    intent.putExtra("CONTADOR_RESPOTA_CORRETA",contadorRespCerta);
+                    startActivity(intent);
                 } else {
                     contQuiz++;
                     // VAI DAR ERRO POIS NÃO HÁ PROX

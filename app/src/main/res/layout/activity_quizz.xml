@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.app.kien.allquiz.MainActivity">
+    tools:context="com.app.kien.allquiz.MainActivitySEMUSO">
 
     <TextView
         android:layout_margin="@dimen/respBt_padd"

@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivitySEMUSO extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

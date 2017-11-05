@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.kien.allquiz.StartActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capital Quiz"
+        android:textSize="30sp"
+        android:layout_marginTop="80dp"/>
+    
+    <Button
+        android:id="@+id/botao1"
+        android:layout_width="@dimen/botaoStart_width"
+        android:layout_height="@dimen/botaoStart_height"
+        android:text="All"
+        android:layout_marginTop="10dp"
+        android:onClick="startQuiz"/>
+    <Button
+        android:id="@+id/botao2"
+        android:layout_width="@dimen/botaoStart_width"
+        android:layout_height="@dimen/botaoStart_height"
+        android:text="Asia"
+        android:layout_marginTop="10dp"
+        android:onClick="startQuiz"/>
+    <Button
+        android:id="@+id/botao3"
+        android:layout_width="@dimen/botaoStart_width"
+        android:layout_height="@dimen/botaoStart_height"
+        android:text="America"
+        android:layout_marginTop="10dp"
+        android:onClick="startQuiz"/>
+    <Button
+        android:id="@+id/botao4"
+        android:layout_width="@dimen/botaoStart_width"
+        android:layout_height="@dimen/botaoStart_height"
+        android:text="Europa"
+        android:layout_marginTop="10dp"
+        android:onClick="startQuiz"/>
+
+</LinearLayout>

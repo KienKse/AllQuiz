@@ -37,9 +37,9 @@ public class quizzActivity extends AppCompatActivity {
 
     String quizDados[][] = {
 //            {"Local" , "Resposta Certa", "Escolha 1", "Escolha 2" , "Escolha 3"}
-            {"Espanha","Madri","Cidade do Mexico","Jakarta","Havana"},
-            {"Italia","Roma","Londres","Paris","Atenas"},
-            {"Brasil","Brasilia","Bahia","Goias","Recife"},
+            {"Qual a Capital da Espanha?","Madri","Cidade do Mexico","Jakarta","Havana"},
+            {"Qual a Capital da Italia?","Roma","Londres","Paris","Atenas"},
+            {"Qual a Capital do Brasil?","Brasilia","Bahia","Goias","Recife"},
             {"Qual a cor do cavalo branco de Napoleão?","Branco","Marron","Preto","Cinza"},
             {"Quanto é 7*7?","49","54","32","38"}
 //            {"","","","",""}

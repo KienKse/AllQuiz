@@ -9,6 +9,7 @@
     android:orientation="vertical">
 
     <TextView
+        android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
@@ -20,38 +21,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Selecao_Quest"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@android:color/holo_red_dark"
         android:layout_marginTop="60dp"/>
-    
+
+
+    <!--Só o perguntas Teste Clicavel-->
     <Button
         android:id="@+id/botao1"
         android:layout_width="@dimen/botaoStart_width"
         android:layout_height="@dimen/botaoStart_height"
         android:text="@string/tipo_quest1"
         android:layout_marginTop="50dp"
-        android:onClick="startQuiz"/>
+        android:onClick="startQuiz"
+        />
     <Button
         android:id="@+id/botao2"
         android:layout_width="@dimen/botaoStart_width"
         android:layout_height="@dimen/botaoStart_height"
         android:text="@string/tipo_quest2"
         android:layout_marginTop="10dp"
-        android:onClick="startQuiz"/>
+        android:clickable="false"
+        />
     <Button
         android:id="@+id/botao3"
         android:layout_width="@dimen/botaoStart_width"
         android:layout_height="@dimen/botaoStart_height"
         android:text="@string/tipo_quest3"
         android:layout_marginTop="10dp"
-        android:onClick="startQuiz"/>
+        android:clickable="false"
+        />
     <Button
         android:id="@+id/botao4"
         android:layout_width="@dimen/botaoStart_width"
         android:layout_height="@dimen/botaoStart_height"
         android:text="@string/tipo_quest4"
         android:layout_marginTop="10dp"
-        android:onClick="startQuiz"/>
+        android:clickable="false"
+        />
 
 </LinearLayout>

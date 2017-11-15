@@ -2,7 +2,9 @@
     <string name="app_name">AllQuiz</string>
     <string name="text1">1ª</string>
     <string name="text2">Questao</string>
-    <string name="Selecao_Quest">Selecione o tipo de questionario que deseja</string>
+    <string name="resultado">Resultado</string>
+    <string name="retorn">Retornar</string>
+    <string name="Selecao_Quest">Selecione um Quiz</string>
     <string name="tipo_quest1">Perguntas Teste</string>
     <string name="tipo_quest2">Tipo de Quest2</string>
     <string name="tipo_quest3">Tipo de Quest3</string>

@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Result"
+        android:text="@string/resultado"
         android:textSize="20sp"
         android:layout_marginTop="50dp"/>
     
@@ -35,7 +35,7 @@
     <Button
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:text="Return"
+        android:text="@string/retorn"
         android:textSize="18sp"
         android:layout_marginTop="80dp"
         android:onClick="returnTop"/>

@@ -82,12 +82,11 @@ public class quizzActivity extends AppCompatActivity {
     }
 
     public void proximoQuiz() {
-        String showQuiz;
+        String showQuiz = "";
         if(contQuiz == 0) {
-            showQuiz = contQuiz + 1 + "";
-        } else {
-            showQuiz = contQuiz + "º";
+            contQuiz++;
         }
+        showQuiz = contQuiz + "º";
         contador.setText(showQuiz);
 
         Random random = new Random();
@@ -139,14 +138,11 @@ public class quizzActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 if(contQuiz == CONT_QUIZ) {
-                    // Mostrar
-                    //SEM FONTE INICIAL
                     Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-                    intent.putExtra("CONTADOR_RESPOTA_CORRETA",contadorRespCerta);
+                    intent.putExtra("CONTADOR_RESPOSTA_CORRETA",contadorRespCerta);
                     startActivity(intent);
                 } else {
                     contQuiz++;
-                    // VAI DAR ERRO POIS NÃO HÁ PROX
                     proximoQuiz();
                 }
             }

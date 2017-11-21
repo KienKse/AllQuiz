@@ -34,10 +34,10 @@ public class quizzActivity extends AppCompatActivity {
     ArrayList<ArrayList<String>> quiz = new ArrayList<>();
 
     String quizDados[][] = {
-//            {"Local" , "Resposta Certa", "Escolha 1", "Escolha 2" , "Escolha 3"}
+//            {"Pergunta" , "Resposta Certa", "Escolha 1", "Escolha 2" , "Escolha 3"}
             {"Que matemático e geógrafo grego calculou o perímetro da Terra em 240 a.C.?", "Eratóstenes", "Descartes", "Sócrates", "Sófocles"},
             {"Segundo o tratado assinado em 1971, que região do planeta ficou interdita a armas nucleares?", "Antártida", "África", "Sara", "Bahamas"},
-            {"Por que nome se tornou mais conhecido o escritor norte-americano Samuel Langhorne Clemens?", "Mark Twain", "Paul Auster", "Paulo Coelho", "Nicolau Gogol"},
+            {"Por qual  nome se tornou mais conhecido o escritor norte-americano Samuel Langhorne Clemens?", "Mark Twain", "Paul Auster", "Paulo Coelho", "Nicolau Gogol"},
             {"Que expressão alemã significa “guerra-relâmpago”?", "Blitzkrieg", "Relâmpago Mcqueen", "Mittagessen", "Kleiner Vogel"},
             {"Como se chamou o Sporting Club de Portugal entre 1904 e 1906?", "Campo Grande Football Club", "Sporting de Portugal", "Não teve nome", "Leões da Estrela"}
     };
@@ -48,7 +48,7 @@ public class quizzActivity extends AppCompatActivity {
             {"Qual é o mais famoso detetive criado por Raymond Chandler?", "Philip Marlowe", "Hercule Poirot", "Sherlock Holmes", "Agatha Christie"},
             {"Em que atividade se destacou La Corbusier?", "Arquitetura", "Cinema", "Teatro", "Literatura"},
             {"Que parque natural na região de Bragança foi criado em 1979?", "Montesinho", "Peneda-Gerês", "Alto Douro", "Arrábida"},
-            {"Como se chama a personagem principal do filme Touro Enraivecido?", "Jake La Motta", "Sugar Ray Robinson", "Sugar Ray Robinson", "Muhamad Ali"}
+            {"Como se chama a personagem principal do filme Touro Enraivecido?", "Jake La Motta", "Sugar Ray Robinson", "Josef Stalin", "Muhamad Ali"}
     };
     String quizDados3[][] = {
 //            {"Local" , "Resposta Certa", "Escolha 1", "Escolha 2" , "Escolha 3"}
@@ -106,58 +106,61 @@ public class quizzActivity extends AppCompatActivity {
 
                 }
                 proximoQuiz();
+                break;
             case 1:
                 for (int i = 0; i < quizDados2.length; i++) {
 
 
                     // Preparando (alocando) o Array
-                    ArrayList<String> datArray = new ArrayList<>();
-                    datArray.add(quizDados2[i][0]); // Local
-                    datArray.add(quizDados2[i][1]); // Resposta Certa
-                    datArray.add(quizDados2[i][2]); // Escolha 1
-                    datArray.add(quizDados2[i][3]); // Escolha 2
-                    datArray.add(quizDados2[i][4]); // Escolha 3
+                    ArrayList<String> datArray2 = new ArrayList<>();
+                    datArray2.add(quizDados2[i][0]); // Local
+                    datArray2.add(quizDados2[i][1]); // Resposta Certa
+                    datArray2.add(quizDados2[i][2]); // Escolha 1
+                    datArray2.add(quizDados2[i][3]); // Escolha 2
+                    datArray2.add(quizDados2[i][4]); // Escolha 3
 
                     // Coloando as coisas no array
-                    quiz.add(datArray);
+                    quiz.add(datArray2);
 
                 }
                 proximoQuiz();
+                break;
             case 2:
                 for (int i = 0; i < quizDados3.length; i++) {
 
 
                     // Preparando (alocando) o Array
-                    ArrayList<String> datArray = new ArrayList<>();
-                    datArray.add(quizDados3[i][0]); // Local
-                    datArray.add(quizDados3[i][1]); // Resposta Certa
-                    datArray.add(quizDados3[i][2]); // Escolha 1
-                    datArray.add(quizDados3[i][3]); // Escolha 2
-                    datArray.add(quizDados3[i][4]); // Escolha 3
+                    ArrayList<String> datArray3 = new ArrayList<>();
+                    datArray3.add(quizDados3[i][0]); // Local
+                    datArray3.add(quizDados3[i][1]); // Resposta Certa
+                    datArray3.add(quizDados3[i][2]); // Escolha 1
+                    datArray3.add(quizDados3[i][3]); // Escolha 2
+                    datArray3.add(quizDados3[i][4]); // Escolha 3
 
                     // Coloando as coisas no array
-                    quiz.add(datArray);
+                    quiz.add(datArray3);
 
                 }
                 proximoQuiz();
-
+                break;
             case 3:
                 for (int i = 0; i < quizDados4.length; i++) {
 
 
                     // Preparando (alocando) o Array
-                    ArrayList<String> datArray = new ArrayList<>();
-                    datArray.add(quizDados4[i][0]); // Local
-                    datArray.add(quizDados4[i][1]); // Resposta Certa
-                    datArray.add(quizDados4[i][2]); // Escolha 1
-                    datArray.add(quizDados4[i][3]); // Escolha 2
-                    datArray.add(quizDados4[i][4]); // Escolha 3
+                    ArrayList<String> datArray4 = new ArrayList<>();
+                    datArray4.add(quizDados4[i][0]); // Local
+                    datArray4.add(quizDados4[i][1]); // Resposta Certa
+                    datArray4.add(quizDados4[i][2]); // Escolha 1
+                    datArray4.add(quizDados4[i][3]); // Escolha 2
+                    datArray4.add(quizDados4[i][4]); // Escolha 3
 
                     // Coloando as coisas no array
-                    quiz.add(datArray);
+                    quiz.add(datArray4);
 
                 }
                 proximoQuiz();
+                break;
 
         }
 

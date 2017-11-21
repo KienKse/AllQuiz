@@ -29,7 +29,7 @@ public class ResultActivity extends AppCompatActivity {
         totalScoreLabel.setText("Pontuação Total: " + totalScore);
 
         if(score == 5) {
-            Toast.makeText(this,"Parabéns",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Parabéns você acertou tudo",Toast.LENGTH_SHORT).show();
         }
 
         //atualiza o total do score
@@ -37,6 +37,7 @@ public class ResultActivity extends AppCompatActivity {
         SharedPreferences.Editor editor= settings.edit();
         editor.putInt("totalScore",totalScore);
         editor.commit();
+
 
     }
 

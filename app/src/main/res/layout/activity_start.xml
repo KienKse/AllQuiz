@@ -42,7 +42,7 @@
         android:layout_height="@dimen/botaoStart_height"
         android:text="@string/tipo_quest2"
         android:layout_marginTop="10dp"
-        android:clickable="false"
+        android:onClick="startQuiz"
         />
     <Button
         android:id="@+id/botao3"
@@ -50,7 +50,7 @@
         android:layout_height="@dimen/botaoStart_height"
         android:text="@string/tipo_quest3"
         android:layout_marginTop="10dp"
-        android:clickable="false"
+        android:onClick="startQuiz"
         />
     <Button
         android:id="@+id/botao4"
@@ -58,7 +58,7 @@
         android:layout_height="@dimen/botaoStart_height"
         android:text="@string/tipo_quest4"
         android:layout_marginTop="10dp"
-        android:clickable="false"
+        android:onClick="startQuiz"
         />
 
 </LinearLayout>

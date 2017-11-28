@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.app.kien.allquiz.quizzActivity">
+    tools:context="com.app.kien.allquiz.quizzActivity"
+    android:background="@drawable/mat">
 
 
     <ImageView
@@ -23,15 +24,18 @@
         android:textSize="20sp"
         android:layout_marginTop="40dp" />
 
-    <TextView
-        android:layout_margin="@dimen/padAll"
-        android:id="@+id/questao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text2"
-        android:textSize="20sp" />
+        <TextView
+            android:layout_margin="@dimen/padAll"
+            android:id="@+id/questao"
+            android:textStyle="bold"
+            android:textColorHint="@color/amarelo_claro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text2"
+            android:textSize="20sp" />
 
     <Button
+        android:background="@drawable/redondo"
         android:id="@+id/bt1"
         android:padding="@dimen/respBt_padd"
         android:layout_marginTop="@dimen/respBt_first_margin"
@@ -40,6 +44,7 @@
         android:layout_height="@dimen/respBt_heigth" />
 
     <Button
+        android:background="@drawable/redondo"
         android:id="@+id/bt2"
         android:padding="@dimen/respBt_padd"
         android:onClick="checarRespostas"
@@ -48,6 +53,7 @@
         android:layout_height="@dimen/respBt_heigth" />
 
     <Button
+        android:background="@drawable/redondo"
         android:id="@+id/bt3"
         android:padding="@dimen/respBt_padd"
         android:onClick="checarRespostas"
@@ -57,6 +63,7 @@
 
 
     <Button
+        android:background="@drawable/redondo"
         android:id="@+id/bt4"
         android:padding="@dimen/respBt_padd"
         android:onClick="checarRespostas"

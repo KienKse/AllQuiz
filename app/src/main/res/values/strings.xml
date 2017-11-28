@@ -5,9 +5,7 @@
     <string name="resultado">Resultado</string>
     <string name="retorn">Retornar</string>
     <string name="Selecao_Quest">Selecione um Quiz</string>
-    <string name="tipo_quest1">Primeiro Quiz</string>
-    <string name="tipo_quest2">Segundo Quiz</string>
-    <string name="tipo_quest3">Terceiro Quiz</string>
-    <string name="tipo_quest4">Quarto Quiz</string>
+    <string name="tipo_quest1">Questões Gerais</string>
+    <string name="tipo_quest2">Questões de Matemática</string>
 
 </resources>

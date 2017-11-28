@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="orangered">#FF5011</color>
+    <color name="gray">#d3d3d3</color>
+    <color name="amarelo_claro">#feffce</color>
+    <color name="roxo_forte">#7933bf</color>
+
 </resources>

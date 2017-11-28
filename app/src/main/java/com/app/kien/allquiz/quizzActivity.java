@@ -2,7 +2,7 @@ package com.app.kien.allquiz;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.Image;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -36,40 +36,35 @@ public class quizzActivity extends AppCompatActivity {
 
     ArrayList<ArrayList<String>> quiz = new ArrayList<>();
 
+    //  {"Pergunta" , "Resposta Certa", "Escolha 1", "Escolha 2" , "Escolha 3"}
     String quizDados[][] = {
             //Gerais
-//            {"Pergunta" , "Resposta Certa", "Escolha 1", "Escolha 2" , "Escolha 3"}
             {"Que matemático e geógrafo grego calculou o perímetro da Terra em 240 a.C.?", "Eratóstenes", "Descartes", "Sócrates", "Sófocles"},
             {"Segundo o tratado assinado em 1971, que região do planeta ficou interdita a armas nucleares?", "Antártida", "África", "Sara", "Bahamas"},
             {"Por qual  nome se tornou mais conhecido o escritor norte-americano Samuel Langhorne Clemens?", "Mark Twain", "Paul Auster", "Paulo Coelho", "Nicolau Gogol"},
             {"Que expressão alemã significa “guerra-relâmpago”?", "Blitzkrieg", "Relâmpago Mcqueen", "Mittagessen", "Kleiner Vogel"},
-            {"Como se chamou o Sporting Club de Portugal entre 1904 e 1906?", "Campo Grande Football Club", "Sporting de Portugal", "Não teve nome", "Leões da Estrela"}
-    };
-
-    String quizDados2[][] = {
+            {"Como se chamou o Sporting Club de Portugal entre 1904 e 1906?", "Campo Grande Football Club", "Sporting de Portugal", "Não teve nome", "Leões da Estrela"},
             {"Em Portugal, a que cidadãos foi retirado o direito de voto em 1913?", "Analfabetos", "Mulheres", "Emigrantes", "Idosos"},
             {"Qual é o mais famoso detetive criado por Raymond Chandler?", "Philip Marlowe", "Hercule Poirot", "Sherlock Holmes", "Agatha Christie"},
             {"Em que atividade se destacou La Corbusier?", "Arquitetura", "Cinema", "Teatro", "Literatura"},
             {"Que parque natural na região de Bragança foi criado em 1979?", "Montesinho", "Peneda-Gerês", "Alto Douro", "Arrábida"},
             {"Como se chama a personagem principal do filme Touro Enraivecido?", "Jake La Motta", "Sugar Ray Robinson", "Josef Stalin", "Muhamad Ali"}
     };
-    String quizDados3[][] = {
+
+    String quizDados2[][] = {
             //Matemática
+            {"Quanto é !0" , "1", "0", "1,5" , "-1"},
+            {"Quanto é (3*3)*0+1?" , "1", "9", "6" , "0"},
             {"Quanto é 60 ao quadrado?" , "3600", "300", "336" , "3015"},
             {"Mariana tem 18 anos. Sua irmã mais velha Melissa tem o triplo de sua idade. Quantos anos tem melissa?" , "54", "56", "42" , "44"},
             {"O Termômetro subiu 6 graus, o que representa a metade da temperatura de antes. A quantos graus está agora?" , "18 graus", "12 graus", "16 graus" , "9 graus"},
             {"O Avicultor diz: (Se eu tivesse dois Patos a mais, o dobro desse número seria 100.) Quantos Patos tem ele?" , "48 Patos", "54 Patos", "72 Patos" , "60 Patos"},
-            {"Zezinho tem 24 bolas. Dá 4 para Luizinho e ambos ficarão com quantidade igual. Quantas bolas tinhas Luizinho inicialmente?" , "20", "14", "16" , "18"}
-
-    };
-    String quizDados4[][] = {
+            {"Zezinho tem 24 bolas. Dá 4 para Luizinho e ambos ficarão com quantidade igual. Quantas bolas tinhas Luizinho inicialmente?" , "20", "14", "16" , "18"},
             {"Pedrinho tem 6 bolas a mais do que Chico. Os dois juntos têm 54. Quanto tem cada um?" , "Pedrinho tem 30, Chico 24", "Pedrinho tem 28, Chico 22", "Pedrinho tem 36, Chico 30" , "Pedrinho tem 40, Chico 34"},
             {"Seis pessoas comem 6 biscoitos em seis minutos. Quantas pessoas comerão 80 biscoitos em 48 minutos?" , "10 pessoas", "14 pessoas", "15 pessoas" , "8 pessoas"},
             {"Perguntado pela idade, Pedro responde: (Daqui a 30 anos, terei três vezes a idade de agora.) Qual a idade de Pedro?" , "15 anos", "13 anos", "18 anos" , "14 anos"},
             {"A Mãe é três vezes mais velha que a filha. Juntas têm 48 anos. Qual é a idade de cada uma?" , "36 e 12", "33 e 15", "30 e 18" , "34 e 14"},
             {"Se estivessem na sala de aula 5 alunos mais, a metade deles seria 20 alunos. Quantos estão lá realmente?" , "35", "32", "34" , "37"}
-
-
     };
 
     @Override
@@ -87,7 +82,6 @@ public class quizzActivity extends AppCompatActivity {
 
         logo.setImageResource(R.drawable.ic_allquiz);
 
-
         //Receber Tipo de questionario
         int quizCategory = getIntent().getIntExtra("QUIZ_CATEGORY", 0);
 
@@ -100,13 +94,6 @@ public class quizzActivity extends AppCompatActivity {
             case 1:
                 preencher(quizDados2);
                 break;
-            case 2:
-                preencher(quizDados3);
-                break;
-            case 3:
-                preencher(quizDados4);
-                break;
-
         }
 
     }
@@ -165,11 +152,13 @@ public class quizzActivity extends AppCompatActivity {
 
         String alerta;
         if (btResposta.getText().equals(respostCerta)) {
-            // Correto
+            MediaPlayer mp = MediaPlayer.create(quizzActivity.this, R.raw.right);
+            mediaPlayer(mp);
             alerta = "Correto!";
             contadorRespCerta++;
         } else {
-            // Errado
+            MediaPlayer mp = MediaPlayer.create(quizzActivity.this, R.raw.nope);
+            mediaPlayer(mp);
             alerta = "Errado...";
         }
 
@@ -193,5 +182,15 @@ public class quizzActivity extends AppCompatActivity {
         });
         builder.setCancelable(false);
         builder.show();
+    }
+
+    private void mediaPlayer(MediaPlayer mp) {
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
+        mp.start();
     }
 }

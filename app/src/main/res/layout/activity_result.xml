@@ -6,17 +6,20 @@
     android:layout_height="match_parent"
     tools:context="com.app.kien.allquiz.ResultActivity"
     android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/gray">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/resultado"
+        android:textStyle="bold"
         android:textSize="20sp"
         android:layout_marginTop="50dp"/>
     
     <TextView
+        android:textStyle="bold"
         android:id="@+id/resultLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,14 +28,17 @@
         android:layout_marginTop="60dp"/>
     
     <TextView
+        android:textStyle="bold"
         android:id="@+id/totalScoreLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total Score: 333"
         android:textSize="20sp"
         android:layout_marginTop="60dp"/>
-    
+
     <Button
+        android:background="@drawable/redondo"
+        android:textStyle="bold"
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:text="@string/retorn"

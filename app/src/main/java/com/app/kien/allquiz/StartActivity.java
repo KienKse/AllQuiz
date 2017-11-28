@@ -7,6 +7,9 @@ import android.view.View;
 
 public class StartActivity extends AppCompatActivity {
 
+    private final int GERAL_DEFAUT = 0;
+    private final int MATEMATICA = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,17 +18,14 @@ public class StartActivity extends AppCompatActivity {
 
     public void startQuiz(View v) {
         // se tiver 0 é a primeira opção
-        int quizCategory = 0;
+        int quizCategory = GERAL_DEFAUT;
 
         switch (v.getId()) {
+            case R.id.botao1:
+                quizCategory = GERAL_DEFAUT;
+                break;
             case R.id.botao2:
-                quizCategory = 1;
-                break;
-            case R.id.botao3:
-                quizCategory = 2;
-                break;
-            case R.id.botao4:
-                quizCategory=3;
+                quizCategory = MATEMATICA;
                 break;
         }
 

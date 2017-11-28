@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.app.kien.allquiz.StartActivity"
     android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bg">
 
     <TextView
         android:layout_marginTop="50dp"
@@ -29,6 +30,7 @@
 
     <!--Só o perguntas Teste Clicavel-->
     <Button
+        android:background="@drawable/redondo"
         android:id="@+id/botao1"
         android:layout_width="@dimen/botaoStart_width"
         android:layout_height="@dimen/botaoStart_height"
@@ -37,26 +39,11 @@
         android:onClick="startQuiz"
         />
     <Button
+        android:background="@drawable/redondo"
         android:id="@+id/botao2"
         android:layout_width="@dimen/botaoStart_width"
         android:layout_height="@dimen/botaoStart_height"
         android:text="@string/tipo_quest2"
-        android:layout_marginTop="10dp"
-        android:onClick="startQuiz"
-        />
-    <Button
-        android:id="@+id/botao3"
-        android:layout_width="@dimen/botaoStart_width"
-        android:layout_height="@dimen/botaoStart_height"
-        android:text="@string/tipo_quest3"
-        android:layout_marginTop="10dp"
-        android:onClick="startQuiz"
-        />
-    <Button
-        android:id="@+id/botao4"
-        android:layout_width="@dimen/botaoStart_width"
-        android:layout_height="@dimen/botaoStart_height"
-        android:text="@string/tipo_quest4"
         android:layout_marginTop="10dp"
         android:onClick="startQuiz"
         />

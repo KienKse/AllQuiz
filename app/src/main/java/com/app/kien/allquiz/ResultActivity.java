@@ -33,7 +33,6 @@ public class ResultActivity extends AppCompatActivity {
         }
 
         //atualiza o total do score
-
         SharedPreferences.Editor editor= settings.edit();
         editor.putInt("totalScore",totalScore);
         editor.commit();
@@ -44,8 +43,6 @@ public class ResultActivity extends AppCompatActivity {
 
     public void returnTop(View v){
         finish();
-//        Intent i = new Intent(getApplicationContext(), StartActivity.class);
-//        startActivity(i);
     }
 
 }

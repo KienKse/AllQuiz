@@ -2,12 +2,14 @@ package com.app.kien.allquiz;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -21,6 +23,7 @@ public class quizzActivity extends AppCompatActivity {
 
     private TextView contador;
     private TextView questao;
+    private ImageView logo;
 
     private Button respBt1;
     private Button respBt2;
@@ -34,6 +37,7 @@ public class quizzActivity extends AppCompatActivity {
     ArrayList<ArrayList<String>> quiz = new ArrayList<>();
 
     String quizDados[][] = {
+            //Gerais
 //            {"Pergunta" , "Resposta Certa", "Escolha 1", "Escolha 2" , "Escolha 3"}
             {"Que matemático e geógrafo grego calculou o perímetro da Terra em 240 a.C.?", "Eratóstenes", "Descartes", "Sócrates", "Sófocles"},
             {"Segundo o tratado assinado em 1971, que região do planeta ficou interdita a armas nucleares?", "Antártida", "África", "Sara", "Bahamas"},
@@ -43,7 +47,6 @@ public class quizzActivity extends AppCompatActivity {
     };
 
     String quizDados2[][] = {
-//            {"Local" , "Resposta Certa", "Escolha 1", "Escolha 2" , "Escolha 3"}
             {"Em Portugal, a que cidadãos foi retirado o direito de voto em 1913?", "Analfabetos", "Mulheres", "Emigrantes", "Idosos"},
             {"Qual é o mais famoso detetive criado por Raymond Chandler?", "Philip Marlowe", "Hercule Poirot", "Sherlock Holmes", "Agatha Christie"},
             {"Em que atividade se destacou La Corbusier?", "Arquitetura", "Cinema", "Teatro", "Literatura"},
@@ -51,7 +54,7 @@ public class quizzActivity extends AppCompatActivity {
             {"Como se chama a personagem principal do filme Touro Enraivecido?", "Jake La Motta", "Sugar Ray Robinson", "Josef Stalin", "Muhamad Ali"}
     };
     String quizDados3[][] = {
-//            {"Local" , "Resposta Certa", "Escolha 1", "Escolha 2" , "Escolha 3"}
+            //Matemática
             {"Quanto é 60 ao quadrado?" , "3600", "300", "336" , "3015"},
             {"Mariana tem 18 anos. Sua irmã mais velha Melissa tem o triplo de sua idade. Quantos anos tem melissa?" , "54", "56", "42" , "44"},
             {"O Termômetro subiu 6 graus, o que representa a metade da temperatura de antes. A quantos graus está agora?" , "18 graus", "12 graus", "16 graus" , "9 graus"},
@@ -60,7 +63,6 @@ public class quizzActivity extends AppCompatActivity {
 
     };
     String quizDados4[][] = {
-//            {"Local" , "Resposta Certa", "Escolha 1", "Escolha 2" , "Escolha 3"}
             {"Pedrinho tem 6 bolas a mais do que Chico. Os dois juntos têm 54. Quanto tem cada um?" , "Pedrinho tem 30, Chico 24", "Pedrinho tem 28, Chico 22", "Pedrinho tem 36, Chico 30" , "Pedrinho tem 40, Chico 34"},
             {"Seis pessoas comem 6 biscoitos em seis minutos. Quantas pessoas comerão 80 biscoitos em 48 minutos?" , "10 pessoas", "14 pessoas", "15 pessoas" , "8 pessoas"},
             {"Perguntado pela idade, Pedro responde: (Daqui a 30 anos, terei três vezes a idade de agora.) Qual a idade de Pedro?" , "15 anos", "13 anos", "18 anos" , "14 anos"},
@@ -81,6 +83,9 @@ public class quizzActivity extends AppCompatActivity {
         respBt2 = findViewById(R.id.bt2);
         respBt3 = findViewById(R.id.bt3);
         respBt4 = findViewById(R.id.bt4);
+        logo = findViewById(R.id.logo);
+
+        logo.setImageResource(R.drawable.ic_allquiz);
 
 
         //Receber Tipo de questionario
@@ -90,80 +95,34 @@ public class quizzActivity extends AppCompatActivity {
 
         switch (quizCategory){
             case 0:
-                for (int i = 0; i < quizDados.length; i++) {
-
-
-                    // Preparando (alocando) o Array
-                    ArrayList<String> datArray = new ArrayList<>();
-                    datArray.add(quizDados[i][0]); // Local
-                    datArray.add(quizDados[i][1]); // Resposta Certa
-                    datArray.add(quizDados[i][2]); // Escolha 1
-                    datArray.add(quizDados[i][3]); // Escolha 2
-                    datArray.add(quizDados[i][4]); // Escolha 3
-
-                    // Coloando as coisas no array
-                    quiz.add(datArray);
-
-                }
-                proximoQuiz();
+                preencher(quizDados);
                 break;
             case 1:
-                for (int i = 0; i < quizDados2.length; i++) {
-
-
-                    // Preparando (alocando) o Array
-                    ArrayList<String> datArray2 = new ArrayList<>();
-                    datArray2.add(quizDados2[i][0]); // Local
-                    datArray2.add(quizDados2[i][1]); // Resposta Certa
-                    datArray2.add(quizDados2[i][2]); // Escolha 1
-                    datArray2.add(quizDados2[i][3]); // Escolha 2
-                    datArray2.add(quizDados2[i][4]); // Escolha 3
-
-                    // Coloando as coisas no array
-                    quiz.add(datArray2);
-
-                }
-                proximoQuiz();
+                preencher(quizDados2);
                 break;
             case 2:
-                for (int i = 0; i < quizDados3.length; i++) {
-
-
-                    // Preparando (alocando) o Array
-                    ArrayList<String> datArray3 = new ArrayList<>();
-                    datArray3.add(quizDados3[i][0]); // Local
-                    datArray3.add(quizDados3[i][1]); // Resposta Certa
-                    datArray3.add(quizDados3[i][2]); // Escolha 1
-                    datArray3.add(quizDados3[i][3]); // Escolha 2
-                    datArray3.add(quizDados3[i][4]); // Escolha 3
-
-                    // Coloando as coisas no array
-                    quiz.add(datArray3);
-
-                }
-                proximoQuiz();
+                preencher(quizDados3);
                 break;
             case 3:
-                for (int i = 0; i < quizDados4.length; i++) {
-
-
-                    // Preparando (alocando) o Array
-                    ArrayList<String> datArray4 = new ArrayList<>();
-                    datArray4.add(quizDados4[i][0]); // Local
-                    datArray4.add(quizDados4[i][1]); // Resposta Certa
-                    datArray4.add(quizDados4[i][2]); // Escolha 1
-                    datArray4.add(quizDados4[i][3]); // Escolha 2
-                    datArray4.add(quizDados4[i][4]); // Escolha 3
-
-                    // Coloando as coisas no array
-                    quiz.add(datArray4);
-
-                }
-                proximoQuiz();
+                preencher(quizDados4);
                 break;
 
         }
 
+    }
+
+    private void preencher(String[][] quizDados2) {
+        for (int i = 0; i < quizDados2.length; i++) {
+            // Preparando (alocando) o Array
+            ArrayList<String> datArray2 = new ArrayList<>();
+            datArray2.add(quizDados2[i][0]);    // Local
+            datArray2.add(quizDados2[i][1]);    // Resposta Certa
+            datArray2.add(quizDados2[i][2]);    // Escolha 1
+            datArray2.add(quizDados2[i][3]);    // Escolha 2
+            datArray2.add(quizDados2[i][4]);    // Escolha 3
+            quiz.add(datArray2);
+        }
+        proximoQuiz();
     }
 
     public void proximoQuiz() {
@@ -184,7 +143,6 @@ public class quizzActivity extends AppCompatActivity {
         //Resposta certa *Set*
         questao.setText(quizScreen.get(0));
 
-        // indice errado na fonte - CORRETO = 1 - FONTE = 0
         respostCerta = quizScreen.get(1);
 
         // Removendo o indice principal e embaralhando
@@ -225,6 +183,7 @@ public class quizzActivity extends AppCompatActivity {
                 if (contQuiz == CONT_QUIZ) {
                     Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
                     intent.putExtra("CONTADOR_RESPOSTA_CORRETA", contadorRespCerta);
+                    finish();
                     startActivity(intent);
                 } else {
                     contQuiz++;

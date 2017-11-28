@@ -8,11 +8,12 @@
     android:orientation="vertical"
     tools:context="com.app.kien.allquiz.quizzActivity">
 
-    <TextView
-        android:layout_margin="@dimen/respBt_padd"
+
+    <ImageView
+        android:layout_margin="@dimen/padAll"
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name" />
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/contQuestao"
@@ -23,6 +24,7 @@
         android:layout_marginTop="40dp" />
 
     <TextView
+        android:layout_margin="@dimen/padAll"
         android:id="@+id/questao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -61,7 +63,5 @@
         android:layout_marginTop="@dimen/respBt_margin"
         android:layout_width="@dimen/respBt_width"
         android:layout_height="@dimen/respBt_heigth" />
-
-
 
 </LinearLayout>

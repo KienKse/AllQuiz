@@ -43,8 +43,9 @@ public class ResultActivity extends AppCompatActivity {
 
 
     public void returnTop(View v){
-        Intent i = new Intent(getApplicationContext(), StartActivity.class);
-        startActivity(i);
+        finish();
+//        Intent i = new Intent(getApplicationContext(), StartActivity.class);
+//        startActivity(i);
     }
 
 }

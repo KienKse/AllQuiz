@@ -9,6 +9,7 @@ public class StartActivity extends AppCompatActivity {
 
     private final int GERAL_DEFAUT = 0;
     private final int MATEMATICA = 1;
+    private final int RACIOCINIO=2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,9 @@ public class StartActivity extends AppCompatActivity {
                 break;
             case R.id.botao2:
                 quizCategory = MATEMATICA;
+                break;
+            case R.id.botao3:
+                quizCategory=RACIOCINIO;
                 break;
         }
 

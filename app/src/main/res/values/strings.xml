@@ -7,5 +7,6 @@
     <string name="Selecao_Quest">Selecione um Quiz</string>
     <string name="tipo_quest1">Questões Gerais</string>
     <string name="tipo_quest2">Questões de Matemática</string>
+    <string name="tipo_quest3">Questões de Raciciocinio Lógico</string>
 
 </resources>

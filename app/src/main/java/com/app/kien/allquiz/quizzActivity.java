@@ -46,25 +46,37 @@ public class quizzActivity extends AppCompatActivity {
             {"Como se chamou o Sporting Club de Portugal entre 1904 e 1906?", "Campo Grande Football Club", "Sporting de Portugal", "Não teve nome", "Leões da Estrela"},
             {"Em Portugal, a que cidadãos foi retirado o direito de voto em 1913?", "Analfabetos", "Mulheres", "Emigrantes", "Idosos"},
             {"Qual é o mais famoso detetive criado por Raymond Chandler?", "Philip Marlowe", "Hercule Poirot", "Sherlock Holmes", "Agatha Christie"},
-            {"Em que atividade se destacou La Corbusier?", "Arquitetura", "Cinema", "Teatro", "Literatura"},
+            {"Em que atividade se destacou Le Corbusier?", "Arquitetura", "Cinema", "Teatro", "Literatura"},
             {"Que parque natural na região de Bragança foi criado em 1979?", "Montesinho", "Peneda-Gerês", "Alto Douro", "Arrábida"},
             {"Como se chama a personagem principal do filme Touro Enraivecido?", "Jake La Motta", "Sugar Ray Robinson", "Josef Stalin", "Muhamad Ali"}
     };
 
     String quizDados2[][] = {
             //Matemática
-            {"Quanto é !0" , "1", "0", "1,5" , "-1"},
-            {"Quanto é (3*3)*0+1?" , "1", "9", "6" , "0"},
-            {"Quanto é 60 ao quadrado?" , "3600", "300", "336" , "3015"},
-            {"Mariana tem 18 anos. Sua irmã mais velha Melissa tem o triplo de sua idade. Quantos anos tem melissa?" , "54", "56", "42" , "44"},
-            {"O Termômetro subiu 6 graus, o que representa a metade da temperatura de antes. A quantos graus está agora?" , "18 graus", "12 graus", "16 graus" , "9 graus"},
-            {"O Avicultor diz: (Se eu tivesse dois Patos a mais, o dobro desse número seria 100.) Quantos Patos tem ele?" , "48 Patos", "54 Patos", "72 Patos" , "60 Patos"},
-            {"Zezinho tem 24 bolas. Dá 4 para Luizinho e ambos ficarão com quantidade igual. Quantas bolas tinhas Luizinho inicialmente?" , "20", "14", "16" , "18"},
-            {"Pedrinho tem 6 bolas a mais do que Chico. Os dois juntos têm 54. Quanto tem cada um?" , "Pedrinho tem 30, Chico 24", "Pedrinho tem 28, Chico 22", "Pedrinho tem 36, Chico 30" , "Pedrinho tem 40, Chico 34"},
-            {"Seis pessoas comem 6 biscoitos em seis minutos. Quantas pessoas comerão 80 biscoitos em 48 minutos?" , "10 pessoas", "14 pessoas", "15 pessoas" , "8 pessoas"},
-            {"Perguntado pela idade, Pedro responde: (Daqui a 30 anos, terei três vezes a idade de agora.) Qual a idade de Pedro?" , "15 anos", "13 anos", "18 anos" , "14 anos"},
-            {"A Mãe é três vezes mais velha que a filha. Juntas têm 48 anos. Qual é a idade de cada uma?" , "36 e 12", "33 e 15", "30 e 18" , "34 e 14"},
-            {"Se estivessem na sala de aula 5 alunos mais, a metade deles seria 20 alunos. Quantos estão lá realmente?" , "35", "32", "34" , "37"}
+            {"Quanto é !0", "1", "0", "1,5", "-1"},
+            {"Quanto é (3*3)*0+1?", "1", "9", "6", "0"},
+            {"Quanto é 60 ao quadrado?", "3600", "300", "336", "3015"},
+            {"Mariana tem 18 anos. Sua irmã mais velha Melissa tem o triplo de sua idade. Quantos anos tem melissa?", "54", "56", "42", "44"},
+            {"O Termômetro subiu 6 graus, o que representa a metade da temperatura de antes. A quantos graus está agora?", "18 graus", "12 graus", "16 graus", "9 graus"},
+            {"O Avicultor diz: (Se eu tivesse dois Patos a mais, o dobro desse número seria 100.) Quantos Patos tem ele?", "48 Patos", "54 Patos", "72 Patos", "60 Patos"},
+            {"Zezinho tem 24 bolas. Dá 4 para Luizinho e ambos ficarão com quantidade igual. Quantas bolas tinhas Luizinho inicialmente?", "20", "14", "16", "18"},
+            {"Pedrinho tem 6 bolas a mais do que Chico. Os dois juntos têm 54. Quanto tem cada um?", "Pedrinho tem 30, Chico 24", "Pedrinho tem 28, Chico 22", "Pedrinho tem 36, Chico 30", "Pedrinho tem 40, Chico 34"},
+            {"Seis pessoas comem 6 biscoitos em seis minutos. Quantas pessoas comerão 80 biscoitos em 48 minutos?", "10 pessoas", "14 pessoas", "15 pessoas", "8 pessoas"},
+            {"Perguntado pela idade, Pedro responde: (Daqui a 30 anos, terei três vezes a idade de agora.) Qual a idade de Pedro?", "15 anos", "13 anos", "18 anos", "14 anos"},
+            {"A Mãe é três vezes mais velha que a filha. Juntas têm 48 anos. Qual é a idade de cada uma?", "36 e 12", "33 e 15", "30 e 18", "34 e 14"},
+            {"Se estivessem na sala de aula 5 alunos mais, a metade deles seria 20 alunos. Quantos estão lá realmente?", "35", "32", "34", "37"}
+    };
+    String quizDados3[][] = {
+            //  {"Pergunta" , "Resposta Certa", "Escolha 1", "Escolha 2" , "Escolha 3"}
+            {"A sequência de palavras abaixo segue uma determinada regra:  " +
+                    "Camiseta, acetona, macaco, abacaxi, mágico  " +
+                    "Qual é a próxima palavra da seqüência? ","publicação","cavalo","azeite","maionese"},
+            {"Coloque as Palavras na Ordem Correta:  Neném(1) - Velho(2) - Adolescente(3) - Adulto(4)","1 - 3 - 4 - 2","2 - 4 - 3 - 1","1 - 4 - 3 - 2","1 - 2 - 3 - 4"},
+            {"Dentre os itens abaixo, qual aquele que pode ser considerado um intruso?","Vaca","Gato","Hiena","Lobo Guará"},
+            {"Um dos elementos relacionados abaixo não está de acordo com os demais do grupo.","Maracujá","Manga","Ameixa","Abacate"},
+            {"Amigo está para Inimigo assim como Alegria está para:","Tristeza","Felicidade","Risos","Sonho"},
+            {"Cabeça está para Pé assim como Teto está para:","Chão","Porta","Parede","Telhado"},
+
     };
 
     @Override
@@ -87,12 +99,15 @@ public class quizzActivity extends AppCompatActivity {
 
         Log.v("Tipo_Categoria", quizCategory + "");
 
-        switch (quizCategory){
+        switch (quizCategory) {
             case 0:
                 preencher(quizDados);
                 break;
             case 1:
                 preencher(quizDados2);
+                break;
+            case 2:
+                preencher(quizDados3);
                 break;
         }
 

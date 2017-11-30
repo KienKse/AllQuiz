@@ -11,10 +11,10 @@
 
 
     <ImageView
-        android:layout_margin="@dimen/padAll"
         android:id="@+id/logo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padAll" />
 
     <TextView
         android:id="@+id/contQuestao"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:text="@string/text1"
         android:textSize="20sp"
-        android:layout_marginTop="40dp" />
+        android:layout_marginTop="20dp" />
 
         <TextView
             android:layout_margin="@dimen/padAll"

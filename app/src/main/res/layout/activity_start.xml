@@ -1,51 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.app.kien.allquiz.StartActivity"
+    android:background="@drawable/bg"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:background="@drawable/bg">
+    tools:context="com.app.kien.allquiz.StartActivity">
 
     <TextView
-        android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:text="@string/app_name"
-        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"
         android:textSize="30dp"
-        android:textColor="@android:color/holo_blue_dark"/>
-    
+        android:textStyle="bold" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:text="@string/Selecao_Quest"
-        android:textSize="22sp"
-        android:textStyle="bold"
         android:textColor="@android:color/holo_red_dark"
-        android:layout_marginTop="60dp"/>
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
 
     <!--Só o perguntas Teste Clicavel-->
     <Button
-        android:background="@drawable/redondo"
         android:id="@+id/botao1"
         android:layout_width="@dimen/botaoStart_width"
         android:layout_height="@dimen/botaoStart_height"
-        android:text="@string/tipo_quest1"
         android:layout_marginTop="50dp"
-        android:onClick="startQuiz"
-        />
-    <Button
         android:background="@drawable/redondo"
+        android:onClick="startQuiz"
+        android:text="@string/tipo_quest1" />
+
+    <Button
         android:id="@+id/botao2"
         android:layout_width="@dimen/botaoStart_width"
         android:layout_height="@dimen/botaoStart_height"
-        android:text="@string/tipo_quest2"
         android:layout_marginTop="10dp"
+        android:background="@drawable/redondo"
         android:onClick="startQuiz"
-        />
+        android:text="@string/tipo_quest2" />
+
+    <Button
+        android:id="@+id/botao3"
+        android:layout_width="@dimen/botaoStart_width"
+        android:layout_height="@dimen/botaoStart_height"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/redondo"
+        android:onClick="startQuiz"
+        android:text="@string/tipo_quest3" />
 
 </LinearLayout>

@@ -69,13 +69,20 @@ public class quizzActivity extends AppCompatActivity {
     String quizDados3[][] = {
             //  {"Pergunta" , "Resposta Certa", "Escolha 1", "Escolha 2" , "Escolha 3"}
             {"A sequência de palavras abaixo segue uma determinada regra:  " +
-                    "Camiseta, acetona, macaco, abacaxi, mágico  " +
+                    "Camiseta, acetona, macaco, abacaxi, mágico. " +
                     "Qual é a próxima palavra da seqüência? ","publicação","cavalo","azeite","maionese"},
             {"Coloque as Palavras na Ordem Correta:  Neném(1) - Velho(2) - Adolescente(3) - Adulto(4)","1 - 3 - 4 - 2","2 - 4 - 3 - 1","1 - 4 - 3 - 2","1 - 2 - 3 - 4"},
             {"Dentre os itens abaixo, qual aquele que pode ser considerado um intruso?","Vaca","Gato","Hiena","Lobo Guará"},
             {"Um dos elementos relacionados abaixo não está de acordo com os demais do grupo.","Maracujá","Manga","Ameixa","Abacate"},
             {"Amigo está para Inimigo assim como Alegria está para:","Tristeza","Felicidade","Risos","Sonho"},
             {"Cabeça está para Pé assim como Teto está para:","Chão","Porta","Parede","Telhado"},
+            {"O professor Epaminondas, no primeiro dia de aula, apostou que, entre os alunos daquela classe," +
+                    " pelo menos dois fariam aniversário no mesmo dia do mês." +
+                    " O professor tinha certeza de que ganharia a aposta, pois naquela" +
+                    " classe o número de alunos era maior ou igual a:","32","28","30","15"},
+            {"O pai de Maria tem cinco filhas: Lalá, Lelé, Lili, Loló e quem é a quinta filha? ","Maria","Lalá","Lelé","Loló"},
+            {"Quando se escreve a sucessão dos números naturais, de 1 a 1000, quantas vezes aparece o algarismo 2 como algarismos das unidades ?","100","1","58","22"},
+            {"Quantas vezes podemos subtrair cinco de 25? ","1 Vez","5 Vezes","100 Vezes","2 Vezes"},
 
     };
 
